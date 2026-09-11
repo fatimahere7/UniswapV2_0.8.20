@@ -1,66 +1,88 @@
-## Foundry
+# Uniswap V2 — Solidity 0.8.20
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A Solidity implementation of **Uniswap V2**, with the core V2 contracts updated to **Solidity ^0.8.20**. The project includes deployment scripts and tests for the Uniswap V2 protocol.
 
-Foundry consists of:
+## 🚀 Features
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- 🦄 Uniswap V2 core contracts
+- 🔄 Token swapping and liquidity management
+- 💧 Liquidity pools
+- 🏦 ERC20 token support
+- 🧪 Smart contract testing with Foundry
+- 🚀 Deployment scripts
+- ⛓️ Mainnet testing and contract interaction
 
-## Documentation
+## 🛠️ Tech Stack
 
-https://book.getfoundry.sh/
+- **Solidity ^0.8.20**
+- **Foundry**
+- **Forge**
+- **Ethereum**
+- **ERC20**
+- **Git Submodules**
 
-## Usage
+## 📁 Project Structure
 
-### Build
+```text
+src/        → Uniswap V2 smart contracts
+test/       → Smart contract tests
+script/     → Deployment scripts
+lib/        → External dependencies
+broadcast/  → Deployment data
+🎯 Project Goal
 
-```shell
-$ forge build
-```
+The goal of this project is to understand and implement the core concepts behind Uniswap V2, including automated market makers (AMMs), liquidity pools, token swaps, and decentralized exchange infrastructure using Solidity and Foundry.
 
-### Test
+⚙️ Setup
+1. Clone the Repository
+git clone <your-repository-url>
+cd UniswapV2_0.8.20
+2. Install Dependencies
 
-```shell
-$ forge test
-```
+Install the required Foundry dependencies:
 
-### Format
+forge install
+3. Build the Contracts
 
-```shell
-$ forge fmt
-```
+Compile the Solidity smart contracts:
 
-### Gas Snapshots
+forge build
+🧪 Testing
 
-```shell
-$ forge snapshot
-```
+Run the complete test suite:
 
-### Anvil
+forge test
+Run Tests with Detailed Output
+forge test -vv
+Run Tests with Maximum Debugging Information
+forge test -vvvv
+Run a Specific Test
 
-```shell
-$ anvil
-```
+Replace testFunctionName with the name of the test you want to run:
 
-### Deploy
+forge test --match-test testFunctionName
+Run Tests from a Specific Contract
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+Replace ContractName with the name of the contract:
 
-### Cast
+forge test --match-contract ContractName
+🚀 Deployment
 
-```shell
-$ cast <subcommand>
-```
+The deployment scripts can be executed using Foundry's forge script command.
 
-### Help
+forge script script/Deploy.s.sol --rpc-url <RPC_URL> --broadcast
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Replace <RPC_URL> with your Ethereum RPC endpoint.
+
+📚 Key Concepts
+
+This project covers several important concepts in decentralized exchange development:
+
+Automated Market Makers (AMMs)
+Liquidity Pools
+Constant Product Formula
+Token Swapping
+Liquidity Provision
+ERC20 Tokens
+Smart Contract Deployment
+Foundry Testing
