@@ -29,6 +29,7 @@ test/       → Smart contract tests
 script/     → Deployment scripts
 lib/        → External dependencies
 broadcast/  → Deployment data
+
 🎯 Project Goal
 
 The goal of this project is to understand and implement the core concepts behind Uniswap V2, including automated market makers (AMMs), liquidity pools, token swaps, and decentralized exchange infrastructure using Solidity and Foundry.
